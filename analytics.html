@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Analytics Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 14px 30px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+z-index: 1000;
+
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+
+font-size: 22px;
+font-weight: bold;
+
+}
+
+.nav-links a {
+
+color: white;
+
+text-decoration: none;
+
+margin-left: 20px;
+
+font-weight: 500;
+
+}
+
+.nav-links a:hover {
+
+color: #00eaff;
+
+}
+
+/* BODY */
+
+body {
+
+padding-top: 70px;
+
+background: linear-gradient(
+135deg,
+#42275a,
+#734b6d
+);
+
+min-height: 100vh;
+
+}
+
+/* Header */
+
+.header {
+
+background: linear-gradient(135deg,#42275a,#734b6d);
+
+color: white;
+
+padding: 20px;
+
+text-align: center;
+
+font-size: 24px;
+
+font-weight: bold;
+
+}
+
+/* Container */
+
+.container {
+
+padding: 20px;
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+gap: 20px;
+
+}
+
+/* Card */
+
+.card {
+
+background: white;
+
+padding: 20px;
+
+border-radius: 14px;
+
+box-shadow:
+0 4px 15px rgba(0,0,0,0.3);
+
+text-align: center;
+
+}
+
+/* Numbers */
+
+.number {
+
+font-size: 32px;
+
+font-weight: bold;
+
+margin-top: 10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+🚨 Disaster Coordinator
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Header -->
+
+<div class="header">
+
+📊 Disaster Response Analytics
+
+</div>
+
+<div class="container">
+
+<!-- Total Requests -->
+
+<div class="card">
+
+<h3>Total Requests</h3>
+
+<div id="totalRequests"
+class="number">0</div>
+
+</div>
+
+<!-- Total Volunteers -->
+
+<div class="card">
+
+<h3>Total Volunteers</h3>
+
+<div id="totalVolunteers"
+class="number">0</div>
+
+</div>
+
+<!-- Chart -->
+
+<div class="card">
+
+<h3>Requests by Type</h3>
+
+<canvas id="requestChart"></canvas>
+
+</div>
+
+</div>
+
+<script type="module"
+src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Live Disaster Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Leaflet Map -->
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+width: 100%;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 14px 30px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+z-index: 1000;
+
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+
+font-size: 22px;
+
+font-weight: bold;
+
+}
+
+.nav-links a {
+
+color: white;
+
+text-decoration: none;
+
+margin-left: 20px;
+
+font-weight: 500;
+
+transition: 0.3s;
+
+}
+
+.nav-links a:hover {
+
+color: #00eaff;
+
+}
+
+/* BODY */
+
+body {
+
+padding-top: 70px;
+
+background: #f4f6f9;
+
+}
+
+/* Header */
+
+.header {
+
+background: linear-gradient(135deg,#1e3c72,#2a5298);
+
+color: white;
+
+padding: 20px;
+
+text-align: center;
+
+font-size: 24px;
+
+font-weight: bold;
+
+}
+
+/* MAP */
+
+#map {
+
+height: calc(100vh - 140px);
+
+width: 100%;
+
+}
+
+/* Legend */
+
+.legend {
+
+position: absolute;
+
+bottom: 20px;
+
+left: 20px;
+
+background: white;
+
+padding: 15px;
+
+border-radius: 10px;
+
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+font-size: 14px;
+
+}
+
+.legend div {
+
+margin-bottom: 5px;
+
+}
+
+.red { color:red; }
+
+.orange { color:orange; }
+
+.green { color:green; }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<div class="logo">
+🚨 Disaster Coordinator
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Page Header -->
+
+<div class="header">
+
+🗺️ Real-Time Disaster Response Dashboard
+
+</div>
+
+<!-- Map -->
+
+<div id="map"></div>
+
+<!-- Legend -->
+
+<div class="legend">
+
+<b>Priority Legend</b>
+
+<div class="red">🔴 High Priority</div>
+
+<div class="orange">🟠 Medium Priority</div>
+
+<div class="green">🟢 Low Priority</div>
+
+</div>
+
+<script type="module"
+src="script.js"></script>
+
+</body>
+
+</html>

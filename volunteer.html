@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Volunteer Registration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Background */
+
+body {
+
+background: linear-gradient(135deg,#1d976c,#93f9b9);
+
+min-height: 100vh;
+
+}
+
+/* Navbar */
+
+.navbar {
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 30px;
+
+background:linear-gradient(135deg,#243b55,#141e30);
+
+color:white;
+
+}
+
+.logo {
+
+font-size:22px;
+
+font-weight:bold;
+
+}
+
+.nav-links a {
+
+color:white;
+
+text-decoration:none;
+
+margin-left:20px;
+
+font-weight:500;
+
+transition:0.3s;
+
+}
+
+.nav-links a:hover {
+
+color:#00eaff;
+
+}
+
+/* Center Card */
+
+.center-box {
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:calc(100vh - 70px);
+
+}
+
+/* Card */
+
+.form-card {
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+width:360px;
+
+box-shadow:
+0 0 30px rgba(0,0,0,0.3);
+
+animation:slideUp 1s ease;
+
+}
+
+/* Title */
+
+h2 {
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:#1d976c;
+
+}
+
+/* Inputs */
+
+input, select {
+
+width:100%;
+
+padding:12px;
+
+margin:10px 0;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+font-size:14px;
+
+}
+
+/* Button */
+
+button {
+
+width:100%;
+
+padding:14px;
+
+background:linear-gradient(135deg,#11998e,#38ef7d);
+
+border:none;
+
+color:white;
+
+font-size:16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+font-weight:bold;
+
+}
+
+button:hover {
+
+transform:scale(1.05);
+
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+}
+
+/* Animation */
+
+@keyframes slideUp {
+
+from {
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Small text */
+
+.note {
+
+font-size:12px;
+
+color:gray;
+
+margin-top:5px;
+
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<div class="logo">
+
+🚨 Disaster Coordinator
+
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Form Center -->
+
+<div class="center-box">
+
+<div class="form-card">
+
+<h2>🤝 Volunteer Registration</h2>
+
+<form id="volunteerForm">
+
+<!-- Name -->
+
+<input
+type="text"
+id="vname"
+placeholder="Full Name"
+required>
+
+<!-- Mobile -->
+
+<input
+type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<!-- Email -->
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<!-- Skill -->
+
+<select id="skill">
+
+<option value="Medical">Medical Support</option>
+
+<option value="Rescue">Rescue Team</option>
+
+<option value="Food">Food Distribution</option>
+
+<option value="General">General Volunteer</option>
+
+</select>
+
+<!-- Shift -->
+
+<select id="shift">
+
+<option value="Morning">Morning Shift</option>
+
+<option value="Afternoon">Afternoon Shift</option>
+
+<option value="Night">Night Shift</option>
+
+</select>
+
+<button type="submit">
+
+Become Available 🚑
+
+</button>
+
+<p class="note">
+
+📍 Location will be captured automatically
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script type="module"
+src="script.js"></script>
+
+</body>
+
+</html>

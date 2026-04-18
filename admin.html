@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 14px 30px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+z-index: 1000;
+
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+
+font-size: 22px;
+font-weight: bold;
+
+}
+
+.nav-links a {
+
+color: white;
+
+text-decoration: none;
+
+margin-left: 20px;
+
+font-weight: 500;
+
+}
+
+.nav-links a:hover {
+
+color: #00eaff;
+
+}
+
+/* BODY */
+
+body {
+
+padding-top: 70px;
+
+background: linear-gradient(
+135deg,
+#1e3c72,
+#2a5298
+);
+
+}
+
+/* Header */
+
+.header {
+
+background: linear-gradient(135deg,#141e30,#243b55);
+
+color: white;
+
+padding: 20px;
+
+text-align: center;
+
+font-size: 26px;
+
+font-weight: bold;
+
+}
+
+/* Container */
+
+.container {
+
+padding: 20px;
+
+}
+
+/* Section */
+
+.section {
+
+background: white;
+
+padding: 20px;
+
+border-radius: 12px;
+
+margin-bottom: 20px;
+
+box-shadow: 0 0 12px rgba(0,0,0,0.2);
+
+}
+
+/* Table */
+
+table {
+
+width: 100%;
+
+border-collapse: collapse;
+
+margin-top: 10px;
+
+font-size: 14px;
+
+}
+
+th, td {
+
+padding: 12px;
+
+border-bottom: 1px solid #ddd;
+
+text-align: left;
+
+}
+
+th {
+
+background: linear-gradient(
+135deg,
+#243b55,
+#141e30
+);
+
+color: white;
+
+}
+
+/* Priority Colors */
+
+.high {
+color: red;
+font-weight: bold;
+}
+
+.medium {
+color: orange;
+font-weight: bold;
+}
+
+.low {
+color: green;
+font-weight: bold;
+}
+
+/* Buttons */
+
+.call-btn {
+
+padding: 6px 12px;
+
+background: linear-gradient(
+135deg,
+#28a745,
+#20c997
+);
+
+color: white;
+
+border: none;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+font-weight: bold;
+
+}
+
+.call-btn:hover {
+
+background: #218838;
+
+}
+/* STATUS COLORS */
+
+.searching {
+
+color: orange;
+
+font-weight: bold;
+
+}
+
+.assigned {
+
+color: blue;
+
+font-weight: bold;
+
+}
+
+.completed {
+
+color: green;
+
+font-weight: bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+🚨 Disaster Coordinator
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Header -->
+
+<div class="header">
+
+🧑‍💼 Disaster Response Admin Panel
+
+</div>
+
+<div class="container">
+
+<!-- REQUESTS -->
+
+<div class="section">
+
+<h2>🚨 Emergency Requests</h2>
+
+<table id="requestsTable">
+
+<tr>
+
+<th>Name</th>
+<th>Mobile</th>
+<th>Type</th>
+<th>Priority</th>
+<th>Address</th>
+<th>Status</th>
+<th>Call</th>
+<th>Complete</th>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- VOLUNTEERS -->
+
+<div class="section">
+
+<h2>🤝 Volunteers</h2>
+
+<table id="volunteersTable">
+
+<tr>
+
+<th>Name</th>
+<th>Mobile</th>
+<th>Email</th>
+<th>Skill</th>
+<th>Shift</th>
+<th>Status</th>
+<th>Call</th>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script type="module"
+src="script.js"></script>
+
+</body>
+
+</html>

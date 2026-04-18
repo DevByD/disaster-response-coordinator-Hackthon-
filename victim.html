@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Request Emergency Help</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Reset */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 14px 30px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+z-index: 1000;
+
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+
+font-size: 22px;
+font-weight: bold;
+
+}
+
+.nav-links a {
+
+color: white;
+
+text-decoration: none;
+
+margin-left: 20px;
+
+font-weight: 500;
+
+}
+
+.nav-links a:hover {
+
+color: #00eaff;
+
+}
+
+/* BODY */
+
+body {
+
+padding-top: 70px;
+
+/* Emergency style background */
+
+background: linear-gradient(
+135deg,
+#8B0000,
+#B22222,
+#FF0000
+);
+
+min-height: 100vh;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+/* Form Card */
+
+.form-card {
+
+background: white;
+
+padding: 40px;
+
+border-radius: 18px;
+
+width: 380px;
+
+box-shadow:
+0 0 35px rgba(0,0,0,0.4);
+
+animation: slideUp 1s ease;
+
+}
+
+/* Title */
+
+h2 {
+
+text-align: center;
+
+margin-bottom: 20px;
+
+color: #B22222;
+
+}
+
+/* Inputs */
+
+input, select, textarea {
+
+width: 100%;
+
+padding: 12px;
+
+margin: 10px 0;
+
+border-radius: 8px;
+
+border: 1px solid #ccc;
+
+font-size: 14px;
+
+}
+
+/* Button */
+
+button {
+
+width: 100%;
+
+padding: 14px;
+
+background: linear-gradient(
+135deg,
+#FF0000,
+#B22222
+);
+
+border: none;
+
+color: white;
+
+font-size: 16px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+font-weight: bold;
+
+}
+
+button:hover {
+
+transform: scale(1.05);
+
+box-shadow: 0 0 12px rgba(0,0,0,0.4);
+
+}
+
+/* Animation */
+
+@keyframes slideUp {
+
+from {
+
+opacity: 0;
+
+transform: translateY(40px);
+
+}
+
+to {
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+}
+
+/* Note */
+
+.note {
+
+font-size: 12px;
+
+color: gray;
+
+margin-top: 5px;
+
+text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+🚨 Disaster Coordinator
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Form -->
+
+<div class="form-card">
+
+<h2>🆘 Request Emergency Help</h2>
+
+<form id="victimForm">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input
+type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<select id="type">
+
+<option value="Food">Food Assistance</option>
+
+<option value="Medical">Medical Emergency</option>
+
+<option value="Rescue">Rescue Required</option>
+
+</select>
+
+<select id="priority">
+
+<option value="High">High Priority</option>
+
+<option value="Medium">Medium Priority</option>
+
+<option value="Low">Low Priority</option>
+
+</select>
+
+<input
+type="text"
+id="address"
+placeholder="Enter Address or Landmark"
+required>
+
+<textarea
+id="description"
+rows="3"
+placeholder="Describe your emergency situation...">
+
+</textarea>
+
+<button type="submit">
+
+🚨 Submit Emergency Request
+
+</button>
+
+<p class="note">
+
+📍 Your GPS location will be captured automatically
+
+</p>
+
+</form>
+
+</div>
+
+<script type="module"
+src="script.js"></script>
+
+</body>
+
+</html>

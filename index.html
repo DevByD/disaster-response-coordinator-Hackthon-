@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Disaster Response Coordinator</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* Reset */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+/* Background WHITE */
+
+body {
+
+background: white;
+
+min-height: 100vh;
+
+}
+
+/* Navbar */
+
+.navbar {
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 18px 40px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+
+font-size: 24px;
+font-weight: bold;
+
+}
+
+.nav-links a {
+
+color: white;
+
+text-decoration: none;
+
+margin-left: 22px;
+
+font-weight: 500;
+
+transition: 0.3s;
+
+}
+
+.nav-links a:hover {
+
+color: #00eaff;
+
+}
+
+/* HERO SECTION */
+
+.hero {
+
+text-align: center;
+
+margin-top: 80px;
+
+animation: fadeIn 2s ease;
+
+}
+
+.hero h1 {
+
+font-size: 44px;
+
+margin-bottom: 20px;
+
+color: black; /* BLACK TITLE */
+
+font-weight: 700;
+
+}
+
+.hero p {
+
+font-size: 18px;
+
+color: #555; /* DARK GREY TEXT */
+
+}
+
+/* Cards */
+
+.container {
+
+display: flex;
+
+justify-content: center;
+
+gap: 30px;
+
+margin-top: 60px;
+
+flex-wrap: wrap;
+
+}
+
+/* Glass Cards */
+
+.card {
+
+background: linear-gradient(
+135deg,
+#1e3c72,
+#2a5298
+);
+
+padding: 30px;
+
+width: 260px;
+
+border-radius: 15px;
+
+text-align: center;
+
+text-decoration: none;
+
+color: white;
+
+transition: 0.3s;
+
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+.card:hover {
+
+transform: translateY(-10px) scale(1.05);
+
+box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+
+}
+
+.card h2 {
+
+margin-bottom: 10px;
+
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+
+from {
+
+opacity: 0;
+
+transform: translateY(40px);
+
+}
+
+to {
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+}
+
+/* Footer */
+
+.footer {
+
+text-align: center;
+
+margin-top: 80px;
+
+padding: 20px;
+
+background: linear-gradient(135deg,#243b55,#141e30);
+
+color: white;
+
+font-weight: 500;
+
+}
+/* Mobile Menu Icon */
+
+.menu-toggle {
+
+display: none;
+
+font-size: 26px;
+
+cursor: pointer;
+
+}
+
+/* Mobile Styles */
+
+@media (max-width: 768px){
+
+.nav-links {
+
+position: absolute;
+
+top: 60px;
+
+right: 0;
+
+background: linear-gradient(
+135deg,#243b55,#141e30
+);
+
+width: 200px;
+
+flex-direction: column;
+
+display: none;
+
+padding: 10px;
+
+}
+
+.nav-links a {
+
+display: block;
+
+margin: 12px 0;
+
+}
+
+.menu-toggle {
+
+display: block;
+
+}
+
+.nav-links.show {
+
+display: flex;
+
+}
+
+}
+/* Menu icon */
+
+.menu-toggle {
+
+display: none;
+
+font-size: 28px;
+
+cursor: pointer;
+
+}
+
+/* Desktop nav */
+
+.nav-links {
+
+display: flex;
+
+}
+
+/* Mobile styles */
+
+@media (max-width: 768px){
+
+.navbar {
+
+flex-wrap: wrap;
+
+}
+
+.menu-toggle {
+
+display: block;
+
+}
+
+.nav-links {
+
+width: 100%;
+
+flex-direction: column;
+
+display: none;
+
+background: linear-gradient(
+135deg,#243b55,#141e30
+);
+
+margin-top: 10px;
+
+padding: 10px;
+
+}
+
+.nav-links a {
+
+display: block;
+
+padding: 10px 0;
+
+margin: 5px 0;
+
+}
+
+.nav-links.show {
+
+display: flex;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<div class="logo">
+🚨 Disaster Coordinator
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="victim.html">🆘 Request</a>
+
+<a href="volunteer.html">🤝 Volunteer</a>
+
+<a href="dashboard.html">🗺️ Dashboard</a>
+
+<a href="admin.html">🧑‍💼 Admin</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+</div>
+
+</div>
+
+<!-- Hero -->
+
+<div class="hero">
+
+<h1>
+Real-Time Disaster Response Coordinator
+</h1>
+
+<p>
+Smart Resource Allocation for Social Impact
+</p>
+
+</div>
+
+<!-- Cards -->
+
+<div class="container">
+
+<a href="victim.html" class="card">
+
+<h2>🆘 Request Help</h2>
+
+<p>
+Submit emergency needs like food, rescue, or medical help.
+</p>
+
+</a>
+
+<a href="volunteer.html" class="card">
+
+<h2>🤝 Volunteer</h2>
+
+<p>
+Register as volunteer and support disaster response.
+</p>
+
+</a>
+
+<a href="dashboard.html" class="card">
+
+<h2>🗺️ Live Dashboard</h2>
+
+<p>
+Monitor live requests and volunteers on map.
+</p>
+
+</a>
+
+<a href="admin.html" class="card">
+
+<h2>🧑‍💼 Admin Panel</h2>
+
+<p>
+Monitor requests and volunteers in real-time.
+</p>
+
+</a>
+
+<a href="analytics.html" class="card">
+
+<h2>📊 Analytics</h2>
+
+<p>
+View statistics and request distribution.
+</p>
+
+</a>
+
+</div>
+
+<!-- Footer -->
+
+<div class="footer">
+
+<p>
+
+Data-Driven Volunteer Coordination for Rapid Disaster Relief ⚡
+
+</p>
+
+</div>
+<script>
+
+function toggleMenu(){
+
+var nav =
+document.getElementById("navLinks");
+
+nav.classList.toggle("show");
+
+}
+
+</script>
+
+</body>
+
+</html>
